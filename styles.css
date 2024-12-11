@@ -5,58 +5,35 @@ body {
     padding: 20px;
     background-color: #f0f0f0;
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
+    max-width: 600px;
     background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
     color: #ea4c89;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
-.generator {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.field {
-    display: flex;
-    flex-direction: column;
-}
-
-h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #444;
-}
-
-textarea {
-    resize: vertical;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-}
-
 button {
-    grid-column: 1 / -1;
-    padding: 15px;
+    padding: 15px 30px;
     background-color: #ea4c89;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
@@ -66,12 +43,10 @@ button:hover {
 }
 
 .result {
-    grid-column: 1 / -1;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 5px;
     font-size: 18px;
-    text-align: center;
     border: 1px solid #ddd;
 }
