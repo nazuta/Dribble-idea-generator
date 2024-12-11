@@ -32,41 +32,14 @@ const strategies = [
 ];
 
 const domains = [
-    "Finance",
-    "Productivity",
-    "Hiring",
-    "Communication",
-    "Workflow",
-    "Storage",
-    "Analytics",
-    "Customer Support",
-    "Marketing",
-    "Legal",
-    "Office",
-    "Software Development",
-    "Loans",
-    "Insurance",
-    "Real Estate",
-    "Transportation",
-    "Healthcare",
-    "eCommerce",
-    "Security",
-    "Content Management",
-    "Market Research",
-    "Business Intelligence",
-    "Human Resources",
-    "Advertising",
-    "Industrials & Manufacturing",
-    "Local Services",
-    "Sales & CRM",
-    "Biotech",
-    "Media",
-    "Government",
-    "Food & Hospitality",
-    "Travel",
-    "Nonprofits",
-    "Education",
-    "Agriculture"
+    "Finance", "Productivity", "Hiring", "Communication", "Workflow",
+    "Storage", "Analytics", "Customer Support", "Marketing", "Legal",
+    "Office", "Software Development", "Loans", "Insurance", "Real Estate",
+    "Transportation", "Healthcare", "eCommerce", "Security", "Content Management",
+    "Market Research", "Business Intelligence", "Human Resources", "Advertising",
+    "Industrials & Manufacturing", "Local Services", "Sales & CRM", "Biotech",
+    "Media", "Government", "Food & Hospitality", "Travel", "Nonprofits",
+    "Education", "Agriculture"
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -77,6 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const randomStrategy = strategies[Math.floor(Math.random() * strategies.length)];
         const randomDomain = domains[Math.floor(Math.random() * domains.length)];
 
-        resultDiv.textContent = `Idea: ${randomStrategy} in the ${randomDomain} industry`;
+        const idea = `Idea: ${randomStrategy} in the ${randomDomain} industry`;
+        console.log(idea); // Додамо лог для перевірки
+        resultDiv.textContent = idea;
+        resultDiv.style.display = 'block'; // Переконаємося, що результат видимий
     });
+
+    // Додамо початкове повідомлення
+    resultDiv.textContent = "Click the button to generate an idea!";
 });
