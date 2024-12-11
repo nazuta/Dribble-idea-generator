@@ -45,5 +45,14 @@ const domains = [
 document.getElementById('generate').addEventListener('click', function() {
     const randomStrategy = strategies[Math.floor(Math.random() * strategies.length)];
     const randomDomain = domains[Math.floor(Math.random() * domains.length)];
-    document.getElementById('result').textContent = `${randomStrategy} for ${randomDomain}`;
+    const result = `${randomStrategy} for ${randomDomain}`;
+    
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = result;
+    resultElement.classList.add('is-flex'); // Додаємо клас для анімації
+    
+    // Видаляємо клас після короткої затримки для ефекту "спалаху"
+    setTimeout(() => {
+        resultElement.classList.remove('is-flex');
+    }, 300);
 });
