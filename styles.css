@@ -49,4 +49,8 @@ button:hover {
     border-radius: 5px;
     font-size: 18px;
     border: 1px solid #ddd;
+    min-height: 60px; /* Додамо мінімальну висоту */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
