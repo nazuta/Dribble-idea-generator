@@ -42,20 +42,8 @@ const domains = [
     "Education", "Agriculture"
 ];
 
-document.addEventListener('DOMContentLoaded', function() {
-    const generateButton = document.getElementById('generate');
-    const resultDiv = document.getElementById('result');
-
-    generateButton.addEventListener('click', function() {
-        const randomStrategy = strategies[Math.floor(Math.random() * strategies.length)];
-        const randomDomain = domains[Math.floor(Math.random() * domains.length)];
-
-        const idea = `Idea: ${randomStrategy} in the ${randomDomain} industry`;
-        console.log(idea); // Додамо лог для перевірки
-        resultDiv.textContent = idea;
-        resultDiv.style.display = 'block'; // Переконаємося, що результат видимий
-    });
-
-    // Додамо початкове повідомлення
-    resultDiv.textContent = "Click the button to generate an idea!";
+document.getElementById('generate').addEventListener('click', function() {
+    const randomStrategy = strategies[Math.floor(Math.random() * strategies.length)];
+    const randomDomain = domains[Math.floor(Math.random() * domains.length)];
+    document.getElementById('result').textContent = `${randomStrategy} for ${randomDomain}`;
 });
